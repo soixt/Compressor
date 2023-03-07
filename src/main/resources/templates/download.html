@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Download File</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/main.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1>Download File</h1>
+                <a th:href="@{'./storage/'+${link}}" target="_blank" download>Download File</a> | <a href="./">Go Home</a>
+            </div>
+        </div>
+    </body>
+</html>

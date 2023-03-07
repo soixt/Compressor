@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compressor</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form class="form" action="./compress-file" method="post" id="form" enctype="multipart/form-data" onsubmit="document.getElementById('start').disabled = true">
+            <h1>Compress & Decompress</h1>
+            <select id="action" onchange="changeAction(this.value)">
+                <option value="./compress-file">Custom compression</option>
+                <option value="./decompress-file">Custom decompression</option>
+                <option value="./arithmetic-compress">Arithmetic compression</option>
+                <option value="./arithmetic-decompress">Arithmetic decompression</option>
+            </select>
+            <div class="file" onclick="document.getElementById('file').click()">
+                <span>Pick A File</span>
+                <input name="file" type="file" id="file" value="">
+            </div>
+            <button type="submit" id="start">Start</button>
+        </form>
+    </div>
+</body>
+</html>
